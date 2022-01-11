@@ -14,8 +14,8 @@ public class PokemonDTO {
 
     private String id;
     private String name;
-    private String height;
-    private String weight;
+    private Double height;
+    private Double weight;
 
 //    private List<LocalDTO> locaisList;
 

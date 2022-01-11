@@ -34,10 +34,10 @@ public class PokemonService {
         HttpResponse<String> response = client.send(httpRequest, HttpResponse.BodyHandlers.ofString());
         response.statusCode();
         ObjectMapper mapper = new ObjectMapper();
-        List<PokemonDTO> pokemonDTOList = mapper.readValue(response.body(), new TypeReference<List<PokemonDTO>>() {
+        PokemonDTO pokemonDTOList = mapper.readValue(response.body(), new TypeReference<PokemonDTO>() {
         });
 
-        return pokemonDTOList.get(0);
+        return pokemonDTOList;
     }
 
 
